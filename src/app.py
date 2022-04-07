@@ -2,7 +2,7 @@ from flask import Flask
 
 app = Flask(__name__)
 
-@app.route('/hello')
+@app.route('/status')
 def hello():
     return 'Hello World!',200
 
