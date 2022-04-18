@@ -14,10 +14,10 @@ def home():
 @app.route('/push-update', methods=['POST'])
 def webhook():
     if request.method == 'POST':
-        repo = git.Repo('/home/codeandcoffee/web-playground')
+        repo = git.Repo('..')
         origin = repo.remotes.origin
         origin.pull()
-        return 'Updated PythonAnywhere successfully!', 200
+        return 'Updated PythonAnywhere successfully', 200
     else:
         return 'Wrong event type', 400
 
